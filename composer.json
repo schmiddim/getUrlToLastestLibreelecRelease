@@ -1,4 +1,9 @@
 {
+    "autoload": {
+        "psr-0": {
+            "Schmiddim\\": "src/"
+        }
+    },
     "require": {
         "guzzlehttp/guzzle": "~6.0"
     }
