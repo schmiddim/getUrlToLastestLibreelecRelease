@@ -51,5 +51,6 @@ function getLatestReleaseFromList($items, DateTime $date)
 }
 $datetime = new DateTime();
 echo getLatestReleaseFromList($items, new \DateTime());
+echo PHP_EOL;
 
 
