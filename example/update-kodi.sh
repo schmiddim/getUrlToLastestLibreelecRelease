@@ -1,11 +1,12 @@
 #!/bin/bash
 
-LATEST_RELEASE="$(php ../release/latest-release.phar)"
+LATEST_RELEASE="$(today-release.phar)"
 REMOTE_UPDATE_FOLDER='/storage/.update'
 
 if [ -z "$1" ]
 then
 	echo usage update-kodi user@ip
+	return
 fi
 
 
