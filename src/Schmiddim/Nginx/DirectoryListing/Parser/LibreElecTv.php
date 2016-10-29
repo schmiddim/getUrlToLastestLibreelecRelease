@@ -34,9 +34,6 @@ class LibreElecTv implements NginxLastItem
 	public function getReleaseForToday()
 	{
 		$date = new \DateTime();
-		if (null === $date) {
-			$date = new \DateTime();
-		}
 		$items = $this->getItems();
 		$y = $date->format('Y');
 		$m = $date->format('m');
