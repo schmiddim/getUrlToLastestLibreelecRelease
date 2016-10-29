@@ -24,7 +24,7 @@ if (!defined('COMPOSER_AUTOLOADER')) {
 require COMPOSER_AUTOLOADER;
 
 
-$parse = new LibreElecTv();
+$parse = new LibreElecTv('http://milhouse.libreelec.tv/builds/master/RPi2/');
 echo $parse->getLatestReleaseFromList();
 echo PHP_EOL;
 

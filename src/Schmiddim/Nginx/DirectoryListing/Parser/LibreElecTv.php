@@ -12,16 +12,15 @@ class LibreElecTv implements NginxLastItem
 	protected $items = null;
 	protected $baseUrl = null;
 
-	const URL = 'http://milhouse.libreelec.tv/builds/master/RPi2/';
-
 	/**
 	 * LibreElecTv constructor.
 	 */
-	public function __construct()
+	public function __construct($url)
 	{
 
+		$this->baseUrl = $url;
 		$httpClient = new Client([
-			'base_uri' => self::URL
+			'base_uri' => $this->getBaseUrl()
 		]);
 		$response = $httpClient->request('GET');
 		$this->processItems((string)$response->getBody());
@@ -87,9 +86,17 @@ class LibreElecTv implements NginxLastItem
 
 
 		foreach ($output[0] as $item) {
-			$this->items[] = self::URL . $item;
+			$this->items[] = $this->getBaseUrl() . $item;
 
 		}
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getBaseUrl()
+	{
+		return $this->baseUrl;
 	}
 
 
