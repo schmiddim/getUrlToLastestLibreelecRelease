@@ -6,7 +6,7 @@ REMOTE_UPDATE_FOLDER='/storage/.update'
 if [ -z "$1" ]
 then
 	echo usage update-kodi user@ip
-	return
+	exit
 fi
 
 Falls nicht mußt du nurdieses <a rel="nofollow" href="https://github.com/schmiddim/getUrlToLastestLibreelecRelease/blob/master/release/latest-release.phar?raw=true">Phar File </a> und ein<a rel="nofollow" href="https://raw.githubusercontent.com/schmiddim/getUrlToLastestLibreelecRelease/master/example/update-kodi.sh"> Bash Script</a> downloaden und in ein <strong>bin</strong> folder legen - $USER/bin wäre ein schöner Ort dafür.
